@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const title = "More Then 60,000 Customers";
+const title = "More Than 60,000 Customers";
 
 const desc =
-  "Buy products on your any device with our app & enjoy your time what you want. Just download & install & start to shopping";
+  "Buy products on your any device with our app & enjoy your time what you want. Just download & install to start shopping";
 
 const clientsList = [
   {
@@ -61,6 +61,9 @@ const Location = () => {
                             <Link to="/sign-up">
                                 <span>{val.text}</span>
                             </Link>
+                            <div className="client-thumb">
+                                <img src={val.imgUrl}></img>
+                            </div>
                         </div>
                     ))
                 }
