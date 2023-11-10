@@ -5,6 +5,7 @@ import "./index.css";
 import "swiper/css";
 import Home from "./home/Home.jsx";
 import Blog from "./blog/Blog.jsx";
+import Shop from "./shop/Shop.jsx";
 
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [{ path: "/", element: <Home /> }, {
       path: "/blog", element: <Blog />
+    }, {
+      path: "/shop", element: <Shop />
     }],
   },
 ]);
