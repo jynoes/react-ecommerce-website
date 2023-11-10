@@ -17,6 +17,7 @@ import "././assets/css/animate.css";
 import "././assets/css/style.min.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SingleProduct from "./shop/SingleProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
       path: "/blog", element: <Blog />
     }, {
       path: "/shop", element: <Shop />
+    }, {
+      path:"shop/:id", element: <SingleProduct />
     }],
   },
 ]);

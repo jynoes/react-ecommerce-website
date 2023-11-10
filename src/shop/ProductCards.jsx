@@ -19,7 +19,7 @@ const ProductCards = ({ GridList, products }) => {
               </div>
 
               <div className="product-action-link">
-                <Link to={'/shop/${product.id}'}><i className="icofont-eye"></i></Link>
+                <Link to={`/shop/${product.id}`}><i className="icofont-eye"></i></Link>
                 <a href="#">
                     <i className="icofont-heart"></i>
                 </a>
