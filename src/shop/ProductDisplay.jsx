@@ -39,6 +39,8 @@ const ProductDisplay = ({ item }) => {
       coupon: coupon,
     };
 
+    // console.log(product)
+
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
 
     const existingProductIndex = existingCart.findIndex(
@@ -94,11 +96,11 @@ const ProductDisplay = ({ item }) => {
           <div className="select-product color">
             <select value={color} onChange={handleColorChange}>
               <option value="">Select color</option>
-              <option value="Small">White</option>
-              <option value="Medium">Black</option>
-              <option value="Large">Blue</option>
-              <option value="Extra-Large">Gray</option>
-              <option value="Double Extra-Large">Green</option>
+              <option value="White">White</option>
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+              <option value="Gray">Gray</option>
+              <option value="Green">Green</option>
             </select>
             <i className="icofont-rounded-down"></i>
           </div>

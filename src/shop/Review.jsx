@@ -112,7 +112,12 @@ const Review = () => {
                   </div>
                 </div>
                 <div className="col-md-12 col-12">
-                  <textarea name="message" id="message" placeholder="Type your message here.." rows="8"></textarea>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Type your message here.."
+                    rows="8"
+                  ></textarea>
                 </div>
 
                 <div className="col-12">
@@ -127,7 +132,44 @@ const Review = () => {
 
         {/* Description Section */}
         <div className="description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a est at ipsum tincidunt sagittis eu egestas elit. Praesent pulvinar semper libero a porta. Donec nec elit et elit facilisis congue ut ut sem. Praesent porta blandit ipsum, ut porta ex sagittis ut. Praesent ornare.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a est
+            at ipsum tincidunt sagittis eu egestas elit. Praesent pulvinar
+            semper libero a porta. Donec nec elit et elit facilisis congue ut ut
+            sem. Praesent porta blandit ipsum, ut porta ex sagittis ut. Praesent
+            ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec a est at ipsum tincidunt sagittis eu egestas elit. Praesent
+            pulvinar semper libero a porta. Donec nec elit et elit facilisis
+            congue ut ut sem. Praesent porta blandit ipsum, ut porta ex sagittis
+            ut. Praesent ornare.
+          </p>
+
+          <div className="post-item">
+            <div className="post-thumb">
+              <img src="/src/assets/images/shop/01.jpg"></img>
+            </div>
+            <div className="post-content">
+              <ul className="lab-ul">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a est
+            at ipsum tincidunt sagittis eu egestas elit. Praesent pulvinar
+            semper libero a porta. Donec nec elit et elit facilisis congue ut ut
+            sem. Praesent porta blandit ipsum, ut porta ex sagittis ut. Praesent
+            ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec a est at ipsum tincidunt sagittis eu egestas elit. Praesent
+            pulvinar semper libero a porta.
+          </p>
         </div>
       </div>
     </>
