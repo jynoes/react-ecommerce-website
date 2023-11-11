@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Rating from "../components/Rating";
 
 const reviewtitle = "Add a Review";
 
@@ -43,13 +44,92 @@ const Review = () => {
           reviewShow ? "RevActive" : "DescActive"
         }`}
       >
-        <li className="desc">
+        <li className="desc" onClick={() => setReviewShow(!reviewShow)}>
           Description
         </li>
-        <li className="rev">
+        <li className="rev" onClick={() => setReviewShow(!reviewShow)}>
           Reviews
         </li>
       </ul>
+
+      {/* Description and Review Content */}
+      <div
+        className={`review-content ${
+          reviewShow ? "review-content-show" : "description-show"
+        }`}
+      >
+        {/* Review Section */}
+        <div className="review-showing">
+          <ul className="content lab-ul">
+            {ReviewList.map((review, i) => (
+              <li key={i}>
+                <div className="post-thumb">
+                  <img src={review.imgUrl}></img>
+                </div>
+                <div className="post-content">
+                  <div className="entry-meta">
+                    <div className="posted-on">
+                      <a href="#">{review.name}</a>
+                      <p>{review.date}</p>
+                    </div>
+                  </div>
+                  <div className="entry-content">
+                    <p>{review.desc}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {/* Add Review Field */}
+          <div className="client-review">
+            <div className="review-form">
+              <div className="review-title">
+                <h5>{reviewtitle}</h5>
+              </div>
+
+              <form action="action" className="row">
+                <div className="col-md-4 col-12">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name *"
+                  ></input>
+                </div>
+                <div className="col-md-4 col-12">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email *"
+                  ></input>
+                </div>
+                <div className="col-md-4 col-12">
+                  <div className="rating">
+                    <span className="me-2 ">Your Rating</span>
+                    <Rating />
+                  </div>
+                </div>
+                <div className="col-md-12 col-12">
+                  <textarea name="message" id="message" placeholder="Type your message here.." rows="8"></textarea>
+                </div>
+
+                <div className="col-12">
+                  <button type="submit" className="default-button">
+                    <span>Submit Review</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Description Section */}
+        <div className="description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a est at ipsum tincidunt sagittis eu egestas elit. Praesent pulvinar semper libero a porta. Donec nec elit et elit facilisis congue ut ut sem. Praesent porta blandit ipsum, ut porta ex sagittis ut. Praesent ornare.</p>
+        </div>
+      </div>
     </>
   );
 };
