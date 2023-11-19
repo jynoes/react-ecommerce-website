@@ -22,6 +22,7 @@ import SingleProduct from "./shop/SingleProduct.jsx";
 import CartPage from "./shop/CartPage.jsx";
 import SingleBlog from "./blog/SingleBlog.jsx";
 import Contact from "./contact/Contact.jsx";
+import AuthProvider from "./contexts/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,8 +44,11 @@ const router = createBrowserRouter([
       path: "/contact", element: <Contact />
     }],
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
 );
