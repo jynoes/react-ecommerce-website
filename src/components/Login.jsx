@@ -23,7 +23,36 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  const handleLogin = (e) => {};
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+
+    const email = form.email.value;
+    const password = form.password.value;
+
+    login(email, password)
+      .then((result) => {
+        const user = result.user;
+        alert("Login Success");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorMsg = error.message;
+        setErrorMessage("Please provide a valid email and password");
+      });
+  };
+
+  const handleRegister = () => {
+    signUpWithGmail()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorMsg = error.message;
+        setErrorMessage("Please provide a valid email and password");
+      });
+  };
 
   return (
     <div>
@@ -50,6 +79,16 @@ const Login = () => {
                   required
                 ></input>
               </div>
+
+              {/* Show Message */}
+              <div>
+                {errorMessage && (
+                  <div className="error-message text-danger mb-1">
+                    {errorMessage}
+                  </div>
+                )}
+              </div>
+
               <div className="form-group">
                 <div className="d-flex justify-content-between flex-wrap pt-sm-2">
                   <div className="checkgroup">
