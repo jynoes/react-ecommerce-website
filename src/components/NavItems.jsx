@@ -10,6 +10,7 @@ const NavItems = () => {
 
   // Auth Info
   const { user } = useContext(AuthContext);
+  console.log(user)
 
   // Add event listener
   window.addEventListener("scroll", () => {
